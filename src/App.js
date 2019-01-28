@@ -37,7 +37,7 @@ class App extends Component{
         <div className="row">
             <div className="col m2"/>
              <div className="col m8">
-                <h1> <i style={icon} className="material-icons">person</i>Roster</h1>
+               
                 <SearchBar search={search}/>
                 <Players player={filteredRoster}/>
             </div>

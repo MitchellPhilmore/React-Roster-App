@@ -5,7 +5,7 @@ let SearchBar = (props)=>{
   
     return(
         <div>
-            <input onChange={props.search} style={inputStyle} placeholder="Search Contacts" />
+            <input onChange={props.search} style={inputStyle} placeholder="Search Roster" />
         </div>
         
     )

@@ -52,6 +52,69 @@ let roster = {
             jerseyNumber:'#12',
             image:'https://d2cwpp38twqe55.cloudfront.net/req/201901141/images/players/mccontj01.jpg'
         },
+        {
+            name:'Jonah Bolden',
+            position: 'PF',
+            team:'Philadelphia 76ers',
+            jerseyNumber:'#43',
+            image:'https://d2cwpp38twqe55.cloudfront.net/req/201901141/images/players/boldejo01.jpg'
+        },
+        {
+            name:'Landry Shamet',
+            position: 'SG',
+            team:'Philadelphia 76ers',
+            jerseyNumber:'#1',
+            image:'https://d2cwpp38twqe55.cloudfront.net/req/201901141/images/players/shamela01.jpg'
+        },
+        {
+            name:'Amir Johnson',
+            position: 'C',
+            team:'Philadelphia 76ers',
+            jerseyNumber:'#25',
+            image:'https://d2cwpp38twqe55.cloudfront.net/req/201901141/images/players/johnsam01.jpg'
+        },
+        {
+            name:'Zhaire Smith',
+            position: 'SG',
+            team:'Philadelphia 76ers',
+            jerseyNumber:'NA',
+            image:'https://d2cwpp38twqe55.cloudfront.net/req/201901141/images/players/smithzh01.jpg'
+        },
+        {
+            name:'Furkan Korkmaz',
+            position: 'SG',
+            team:'Philadelphia 76ers',
+            jerseyNumber:'#30',
+            image:'https://d2cwpp38twqe55.cloudfront.net/req/201901141/images/players/korkmfu01.jpg'
+        },
+        {
+            name:'Mike Muscala',
+            position: 'PF/C',
+            team:'Philadelphia 76ers',
+            jerseyNumber:'#31',
+            image:'https://d2cwpp38twqe55.cloudfront.net/req/201901141/images/players/muscami01.jpg'
+        },
+        {
+            name:'Shake Milton',
+            position: 'SG',
+            team:'Philadelphia 76ers',
+            jerseyNumber:'#18',
+            image:'https://d2cwpp38twqe55.cloudfront.net/req/201901141/images/players/miltosh01.jpg'
+        },
+        {
+            name:'Corey Brewer',
+            position: 'SG/SF',
+            team:'Philadelphia 76ers',
+            jerseyNumber:'#00',
+            image:'https://d2cwpp38twqe55.cloudfront.net/req/201901141/images/players/breweco01.jpg'
+        },
+        {
+            name:'Justin Patton',
+            position: 'C',
+            team:'Philadelphia 76ers',
+            jerseyNumber:'#24',
+            image:'https://d2cwpp38twqe55.cloudfront.net/req/201901141/images/players/pattoju01.jpg'
+        },
     ]
 }
 
