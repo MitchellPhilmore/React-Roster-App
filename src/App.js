@@ -1,28 +1,53 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {Component} from 'react'
+import ReactDOM from 'react-dom'
+import SearchBar from './SearchBar'
+import Players from './Players'
+import roster from './roster'
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
-  }
+class App extends Component{
+    constructor(props){
+        super(props)
+
+       this.state = {
+           roster: roster.players,
+           searchTerm: ''
+       }
+     
+    }
+
+    componentDidMount(){
+        console.log(this.state.roster)
+    }
+
+
+    render(){
+        let search = (e)=>{
+            this.setState({
+                searchTerm:e.target.value
+            })
+            console.log(this.state.searchTerm)
+          } 
+        let icon = {fontSize:'80px'}
+
+       let filteredRoster = this.state.roster.filter(player=>{
+            return player.name.toLowerCase().includes(this.state.searchTerm.toLowerCase())
+        })
+
+        return(
+        <div className="row">
+            <div className="col m2"/>
+             <div className="col m8">
+                <h1> <i style={icon} className="material-icons">person</i>Roster</h1>
+                <SearchBar search={search}/>
+                <Players player={filteredRoster}/>
+            </div>
+           
+         
+           
+        </div>
+       
+        )
+    }
 }
 
-export default App;
+export default App
