@@ -33,12 +33,16 @@ class App extends Component{
             return player.name.toLowerCase().includes(this.state.searchTerm.toLowerCase())
         })
 
+        let style = {width:'100%',height:'400px'}
+
         return(
         <div className="row">
+        <div className=" col m12"><img style={style} src="https://i.pinimg.com/originals/96/9b/fc/969bfc2f7c44e1b2797c0d3bafb0c25d.jpg"/></div>
             <div className="col m2"/>
              <div className="col m8">
                
                 <SearchBar search={search}/>
+                <br/>
                 <Players player={filteredRoster}/>
             </div>
            
