@@ -5,6 +5,11 @@
   "repository": "https://github.com/MitchellPhilmore/React-Roster-App.git",
   "author": "mitchellphilmore <mitchellphilmore@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "client": "cd client && npm start",
+    "server": "nodemon server.js",
+    "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\""
+  },
   "dependencies": {
     "concurrently": "^4.1.0",
     "express": "^4.16.4",

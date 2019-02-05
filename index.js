@@ -5,9 +5,10 @@ let express = require('express'),
 
 app.get('/api/roster',(req,res)=>{
     let data = {
-        name:'Ben Simmons',
-        year:'2018-2019'
+        "name":'Ben Simmons',
+        "year":'2018-2019'
     }
+    res.json(data)
 })
 
 

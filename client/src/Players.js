@@ -21,6 +21,7 @@ class Players extends Component{
               <h5>{p.position}</h5>
               <h5>{p.jerseyNumber}</h5>
               <h5>{p.team}</h5>
+              <h5>{this.props.stats.name}</h5>
             </div>
           </div>
         </div>

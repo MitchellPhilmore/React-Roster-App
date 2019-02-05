@@ -10,14 +10,26 @@ class App extends Component{
 
        this.state = {
            roster: roster.players,
-           searchTerm: ''
+           searchTerm: '',
+           data: {}
        }
      
     }
 
+    getData = async ()=>{
+     let response = await fetch('api/roster')
+     let data = await response.json()
+     console.log(typeof JSON.stringify(data))
+     this.setState({data:data})
+    }
+
     componentDidMount(){
         console.log(this.state.roster)
+        this.getData()
+      
+        
     }
+
 
 
     render(){
@@ -43,7 +55,7 @@ class App extends Component{
                
                 <SearchBar search={search}/>
                 <br/>
-                <Players player={filteredRoster}/>
+                <Players stats={this.state.data} player={filteredRoster}/>
             </div>
            
          
