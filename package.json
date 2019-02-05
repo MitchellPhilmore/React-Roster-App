@@ -1,0 +1,13 @@
+{
+  "name": "React-Roster-App",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/MitchellPhilmore/React-Roster-App.git",
+  "author": "mitchellphilmore <mitchellphilmore@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "concurrently": "^4.1.0",
+    "express": "^4.16.4",
+    "request": "^2.88.0"
+  }
+}
