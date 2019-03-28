@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom'
 import SearchBar from './SearchBar'
 import Players from './Players'
 import roster from './roster'
-
+import Navbar from './Navbar'
 class App extends Component{
     constructor(props){
         super(props)
@@ -11,28 +11,21 @@ class App extends Component{
        this.state = {
            roster: roster.players,
            searchTerm: '',
-           data: {}
+           rosterData: [],
+           stats:[],
+           loading:true
        }
-     
     }
-
-    getData = async ()=>{
-     let response = await fetch('api/roster')
-     let data = await response.json()
-     console.log(typeof JSON.stringify(data))
-     this.setState({data:data})
-    }
-
-    componentDidMount(){
-        console.log(this.state.roster)
-        this.getData()
-      
-        
-    }
-
-
-
+   
+    isLoading(){
+        this.setState({
+          loading:false
+        })
+        // return <Players  stats={this.state.rosterData} player={filteredRoster}/>
+      }
+   
     render(){
+        
         let search = (e)=>{
             this.setState({
                 searchTerm:e.target.value
@@ -49,13 +42,18 @@ class App extends Component{
 
         return(
         <div className="row">
-        <div className=" col m12"><img style={style} src="https://i.pinimg.com/originals/96/9b/fc/969bfc2f7c44e1b2797c0d3bafb0c25d.jpg"/></div>
-            <div className="col m2"/>
-             <div className="col m8">
-               
+       
+        <Navbar/>
+                    <div className="col m2"/>
+                    <div className="col m8">
+                 <br/>
+                 <br/>
+                 <br/>
                 <SearchBar search={search}/>
                 <br/>
-                <Players stats={this.state.data} player={filteredRoster}/>
+                <br/>
+                {/* {this.state.loading? setTimeout(this.isLoading,3000):false} */}
+                <Players  stats={this.state.rosterData} player={filteredRoster}/>
             </div>
            
          

@@ -11,8 +11,11 @@
     "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\""
   },
   "dependencies": {
+    "cheerio": "^1.0.0-rc.2",
     "concurrently": "^4.1.0",
     "express": "^4.16.4",
+    "mongoose": "^5.4.19",
+    "react-spinner-material": "^1.0.19",
     "request": "^2.88.0"
   }
 }

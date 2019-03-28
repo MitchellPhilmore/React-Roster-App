@@ -1,7 +1,11 @@
 import React from 'react'
 
 let SearchBar = (props)=>{
-    let inputStyle = {textAlign:'center'}
+    let inputStyle = {
+        textAlign:'center',
+        fontSize:'2em',
+        fontFamily: "'Open Sans Condensed', sans-serif'",
+        }
   
     return(
         <div>

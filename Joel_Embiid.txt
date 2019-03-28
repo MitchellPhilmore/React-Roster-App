@@ -1,0 +1,1 @@
+{"season":"Season: 2018-19","gamesPlayed":"Games Played: 59","pointsPerGame":"Points Per Game: 27.5","fieldGoalPercentage":"FG\" 48.1%","threePointPercentage":"3 Point FG: 31.1%","assistPerGame":"Assists Per Game: 3.1","totalReboundsPerGame":"Total Rebounds Per Game: 13.8","twitter":"JoelEmbiid"}

@@ -11,7 +11,7 @@ let roster = {
             
         },
         {
-            name:'Joel Embiid',
+            name:"Joel Embiid",
             position: 'C',
             team:'Philadelphia 76ers',
             jerseyNumber:'#21',
@@ -25,28 +25,28 @@ let roster = {
             image:'https://d2cwpp38twqe55.cloudfront.net/req/201901141/images/players/butleji01.jpg'
         },
         {
-            name:'Wilson Chandler',
-            position: 'PF',
+            name:'Tobias Harris',
+            position: 'SF/PF',
             team:'Philadelphia 76ers',
-            jerseyNumber:'#22',
-            image:'https://d2cwpp38twqe55.cloudfront.net/req/201901141/images/players/chandwi01.jpg'
+            jerseyNumber:'#34',
+            image:'https://d2cwpp38twqe55.cloudfront.net/req/201902061/images/players/harrito02.jpg'
         },
         {
-            name:'JJ Redick',
+            name:"J.J. Redick",
             position: 'SG',
             team:'Philadelphia 76ers',
             jerseyNumber:'#17',
             image:'https://d2cwpp38twqe55.cloudfront.net/req/201901141/images/players/redicjj01.jpg'
         },
         {
-            name:'Markelle Fultz',
+            name:'Jonathon Simmons',
             position: 'SG',
             team:'Philadelphia 76ers',
-            jerseyNumber:'#20',
-            image:'https://d2cwpp38twqe55.cloudfront.net/req/201901141/images/players/fultzma01.jpg'
+            jerseyNumber:'#17',
+            image:'https://d2cwpp38twqe55.cloudfront.net/req/201902061/images/players/simmojo02.jpg'
         },
         {
-            name:'TJ McConnell',
+            name:'T.J. McConnell',
             position: 'PG',
             team:'Philadelphia 76ers',
             jerseyNumber:'#12',
@@ -60,11 +60,11 @@ let roster = {
             image:'https://d2cwpp38twqe55.cloudfront.net/req/201901141/images/players/boldejo01.jpg'
         },
         {
-            name:'Landry Shamet',
-            position: 'SG',
+            name:'Mike Scott',
+            position: 'PF',
             team:'Philadelphia 76ers',
-            jerseyNumber:'#1',
-            image:'https://d2cwpp38twqe55.cloudfront.net/req/201901141/images/players/shamela01.jpg'
+            jerseyNumber:'#30',
+            image:'https://d2cwpp38twqe55.cloudfront.net/req/201902061/images/players/scottmi01.jpg'
         },
         {
             name:'Amir Johnson',
@@ -88,11 +88,11 @@ let roster = {
             image:'https://d2cwpp38twqe55.cloudfront.net/req/201901141/images/players/korkmfu01.jpg'
         },
         {
-            name:'Mike Muscala',
-            position: 'PF/C',
+            name:'Boban Marjanovic',
+            position: 'C',
             team:'Philadelphia 76ers',
-            jerseyNumber:'#31',
-            image:'https://d2cwpp38twqe55.cloudfront.net/req/201901141/images/players/muscami01.jpg'
+            jerseyNumber:'#51',
+            image:'https://d2cwpp38twqe55.cloudfront.net/req/201902061/images/players/marjabo01.jpg'
         },
         {
             name:'Shake Milton',
@@ -101,13 +101,7 @@ let roster = {
             jerseyNumber:'#18',
             image:'https://d2cwpp38twqe55.cloudfront.net/req/201901141/images/players/miltosh01.jpg'
         },
-        {
-            name:'Corey Brewer',
-            position: 'SG/SF',
-            team:'Philadelphia 76ers',
-            jerseyNumber:'#00',
-            image:'https://d2cwpp38twqe55.cloudfront.net/req/201901141/images/players/breweco01.jpg'
-        },
+       
         {
             name:'Justin Patton',
             position: 'C',
@@ -117,5 +111,29 @@ let roster = {
         },
     ]
 }
+roster.players = roster.players.sort((a, b) => (a.name > b.name) ? 1 : -1)
+
+
+ let getStats = async ()=>{
+     let response = await fetch('api/roster')
+     let data = await response.json()
+    await data.sort((a,b)=>(a.playerName > b.playerName )?1:-1)
+    await  data.forEach((player,i)=>{
+       
+            roster.players[i]['gamesPlayed'] = player.gamesPlayed
+            roster.players[i]['season'] = player.season
+            roster.players[i]['pointsPerGame'] = player.pointsPerGame
+            roster.players[i]['fieldGoalPercentage'] = player.fieldGoalPercentage
+            roster.players[i]['threePointPercentage'] = player.threePointPercentage
+            roster.players[i]['assistPerGame'] = player.assistPerGame
+            roster.players[i]['totalReboundsPerGame'] = player.totalReboundsPerGame
+            roster.players[i]['twitter'] = player.twitter
+
+     })
+     console.log(roster.players)
+     console.log('---------------')
+     console.log(data)
+ }
+getStats()
 
 export default roster
