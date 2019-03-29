@@ -58,6 +58,8 @@ class Players extends Component{
                 <h5 style={fontStyles}>{p.totalReboundsPerGame}</h5>
                 <h5 style={fontStyles}>{p.assistPerGame}</h5>
                 <h5 style={fontStyles}>Twitter: @{p.twitter}</h5>
+                <h5 style={fontStyles}>Twitter: @{p.twitter}</h5>
+                <h5 style={fontStyles}>Twitter: @{p.twitter}</h5>
 
 
                 <h5 style={fontStyles}>{p.gamesPlayed}</h5>
