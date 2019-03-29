@@ -2,7 +2,7 @@ let request = require('request')
 let cheerio = require('cheerio')
 let express = require('express')
 let app = express() 
-let port = process.env.PORT || 3001
+let port = process.env.PORT || 3002
 let mongoose = require('mongoose')
 
 // intialize database
